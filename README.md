@@ -11,9 +11,9 @@
 ## category
 ### title
 > <date YY-mm-dd>
-`````lang
+<code>
 instruction
-`````
+</code>
 > <author>
 [> <mail>]
 ---
