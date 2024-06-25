@@ -20,3 +20,18 @@ instruction
 ````
 
 ---
+## Rust
+### Linux安装Rust环境
+> 2024-6-25
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+> fb0sh
+---
+### Linux安装Rust环境 (中国区环境)
+> 2024-6-25
+```bash
+export RUSTUP_DIST_SERVER="https://rsproxy.cn";export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup";curl --proto '=https' --tlsv1.2 -sSf https://rsproxy.cn/rustup-init.sh | sh
+```
+> fb0sh
+---
