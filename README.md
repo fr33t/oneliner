@@ -18,6 +18,11 @@ instruction
 ```
 --- <!-- 当前liner的 分割线 也是尾部 -->
 ````
+## 目录
+* [Rust](#rust)
+  * [Linux安装Rust环境](#linux安装rust环境)
+  * [Linux安装Rust环境 (中国区环境)](#linux安装rust环境-中国区环境)
+
 
 <!-- 列表头 -->
 ## Rust
