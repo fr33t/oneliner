@@ -7,16 +7,16 @@
 仓库遵循 content first 原则.
 
 格式要求
-```
+````
 ## category
 ### title
 > <date YY-mm-dd>
-<code>
+```lang
 instruction
-</code>
+```
 > <author>
 [> <mail>]
 ---
-```
+````
 
 ---
