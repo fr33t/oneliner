@@ -20,10 +20,10 @@ instruction
 --- <!-- 当前liner的 分割线 也是尾部 -->
 ````
 ## 目录
-* [Rust](#rust)
-  * [Linux安装Rust环境](#linux安装rust环境)
-* [渗透测试](#渗透测试)
-  * [Linpeas.sh枚举提权信息](#linpeassh枚举提权信息)
+ * [Rust](#rust)
+   * [Linux安装Rust环境](#linux安装rust环境)
+ * [渗透测试](#渗透测试)
+   * [Linpeas.sh枚举提权信息](#linpeassh枚举提权信息)
 
 <!-- 列表头 -->
 ## Rust
@@ -46,11 +46,11 @@ export RUSTUP_DIST_SERVER="https://rsproxy.cn";export RUSTUP_UPDATE_ROOT="https:
 curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh | sh
 ```
 > **python2**
-```python2
+```bash
 python -c "import urllib.request; urllib.request.urlretrieve('https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh', 'linpeas.sh')"
 ```
 > **python3**
-```python3
+```bash
 python3 -c "import urllib.request; urllib.request.urlretrieve('https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh', 'linpeas.sh')"
 ```
 --- 
