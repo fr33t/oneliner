@@ -12,8 +12,9 @@
 ````
 ## category <!-- 分类, 也是liner的 头部 --> <!-- 由管理员 识别并合并 -->
 ### title
-> <date YY-mm-dd>: <author|mail>
-```lang
+> ***<date YY-mm-dd>: <author|mail>***
+[> **<description>**] <!-- 描述信息 -->
+```lang <!-- 该部分可有多个 -->
 instruction
 ```
 --- <!-- 当前liner的 分割线 也是尾部 -->
@@ -21,22 +22,37 @@ instruction
 ## 目录
 * [Rust](#rust)
   * [Linux安装Rust环境](#linux安装rust环境)
-  * [Linux安装Rust环境 (中国区环境)](#linux安装rust环境-中国区环境)
-
+* [渗透测试](#渗透测试)
+  * [Linpeas.sh枚举提权信息](#linpeassh枚举提权信息)
 
 <!-- 列表头 -->
 ## Rust
 ### Linux安装Rust环境
-> 2024-6-25: fb0sh
+> ***2024-6-25: fb0sh***
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
----
-
-### Linux安装Rust环境 (中国区环境)
-> 2024-6-25: fb0sh
+> **(中国区环境)**
 ```bash
 export RUSTUP_DIST_SERVER="https://rsproxy.cn";export RUSTUP_UPDATE_ROOT="https://rsproxy.cn/rustup";curl --proto '=https' --tlsv1.2 -sSf https://rsproxy.cn/rustup-init.sh | sh
 ```
 ---
+
+
+## 渗透测试
+### Linpeas.sh枚举提权信息
+> ***2024-6-25: fb0sh***
+```bash
+curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh | sh
+```
+> **python2**
+```python2
+python -c "import urllib.request; urllib.request.urlretrieve('https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh', 'linpeas.sh')"
+```
+> **python3**
+```python3
+python3 -c "import urllib.request; urllib.request.urlretrieve('https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh', 'linpeas.sh')"
+```
+--- 
+
 <!-- 列表尾 -->
