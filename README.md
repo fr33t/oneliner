@@ -11,10 +11,12 @@
 ## category
 ### title
 > <date YY-mm-dd>
-`` ``` ``lang
+&#96;&#96;&#96;lang
 instruction
-`` ``` ``
+&#96;&#96;&#96;
 > <author>
 [> <mail>]
 ---
 ```
+
+---
