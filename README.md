@@ -125,4 +125,11 @@ window.print();
 ```powershell
 $language=(Get-Culture).Name;if($language -eq "zh-CN"){$profileRegex="\s所有用户配置文件\s*:\s*(.*)$";$keyContentRegex="关键内容\s*:\s*(.*)$"}else{$profileRegex="\sAll User Profile\s*:\s*(.*)$";$keyContentRegex="Key Content\s*:\s*(.*)$"};$results=@();$profiles=netsh wlan show profiles|Select-String $profileRegex|ForEach-Object {$_.Matches[0].Groups[1].Value.Trim()};foreach($profile in $profiles){$profileInfo=netsh wlan show profile name="$profile" key=clear;$passwordMatch=$profileInfo|Select-String $keyContentRegex;$password=if($passwordMatch){$passwordMatch.Matches[0].Groups[1].Value.Trim()}else{"No Password Found"};$results+=[PSCustomObject]@{SSID=$profile;Password=$password}};$results|Format-Table -AutoSize
 ```
+## GIT
+### winget安装git
+> ***2024-7-4: fb0sh***
+```powershell
+winget install --id Git.Git -e --source winget
+```
+---
 <!-- 列表尾 -->
