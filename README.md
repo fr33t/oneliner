@@ -140,4 +140,10 @@ winget install --id Git.Git -e --source winget
 res=[f"{i:03}" for i in range(100)]
 ```
 ---
+### windows重启进入BIOS(仅适用UEFI启动)
+> ***2024-7-17: fb0sh***
+```cmd
+shutdown.exe /r /fw /t 1
+```
+---
 <!-- 列表尾 -->
