@@ -132,4 +132,12 @@ $language=(Get-Culture).Name;if($language -eq "zh-CN"){$profileRegex="\s所有�
 winget install --id Git.Git -e --source winget
 ```
 ---
+
+## Python 小段代码
+### python 0 填充
+> ***<2024-7-17>: fb0sh***
+```python
+res=[f"{i:03}" for i in range(100)]
+```
+---
 <!-- 列表尾 -->
