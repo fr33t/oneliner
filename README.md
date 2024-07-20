@@ -146,4 +146,17 @@ res=[f"{i:03}" for i in range(100)]
 shutdown.exe /r /fw /t 1
 ```
 ---
+## Docker
+### Docker 删除所有镜像
+> ***2024-7-20: fb0sh***
+```bash
+docker rmi $(docker images | sed -n '2,14p' | awk '{print $3}' | tr -s "\n" " ")
+```
+---
+### Docker 删除所有容器
+> ***2024-7-20: fb0sh***
+```bash
+docker rm $(docker ps -a | sed -n '2,14p' | awk '{print $1}' | tr -s "\n" " ")
+```
+---
 <!-- 列表尾 -->
